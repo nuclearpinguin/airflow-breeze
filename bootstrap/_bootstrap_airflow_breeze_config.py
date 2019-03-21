@@ -157,6 +157,15 @@ SERVICE_ACCOUNTS = [
          roles=['roles/editor'],
          services=['storage-api.googleapis.com', 'storage-component.googleapis.com'],
          appspot_service_account_impersonation=False),
+    dict(keyfile='gcp_cloud_build.json',
+         account_name='gcp-cloud_build-account',
+         account_description='Google Cloud Build account',
+         roles=['roles/cloudbuild.builds.editor', 'roles/source.admin', 'roles/storage.admin'],
+         services=['storage-api.googleapis.com',
+                   'storage-component.googleapis.com',
+                   'sourcerepo.googleapis.com',
+                   'cloudbuild.googleapis.com'],
+         appspot_service_account_impersonation=False),
 ]
 
 

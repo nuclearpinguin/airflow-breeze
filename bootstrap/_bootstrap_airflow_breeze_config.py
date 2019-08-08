@@ -157,6 +157,7 @@ SERVICE_ACCOUNTS = [
          roles=['roles/editor'],
          services=['storage-api.googleapis.com', 'storage-component.googleapis.com'],
          appspot_service_account_impersonation=False),
+<<<<<<< HEAD
     dict(keyfile='gcp_automl.json',
          account_name='gcp-automl-account',
          account_description='Google Cloud AutoML account',
@@ -168,6 +169,22 @@ SERVICE_ACCOUNTS = [
          account_description='Google Cloud BigQuery account',
          roles=['roles/bigquery.admin', 'roles/storage.objectAdmin', 'roles/bigquery.tables.get'],
          services=['bigquery.googleapis.com'],
+=======
+    dict(keyfile='gcp_cloud_build.json',
+         account_name='gcp-cloud-build-account',
+         account_description='Google Cloud Build account',
+         roles=['roles/cloudbuild.builds.editor', 'roles/source.admin', 'roles/storage.admin'],
+         services=['storage-api.googleapis.com',
+                   'storage-component.googleapis.com',
+                   'sourcerepo.googleapis.com',
+                   'cloudbuild.googleapis.com'],
+         appspot_service_account_impersonation=False),
+    dict(keyfile='gcp_dataproc.json',
+         account_name='gcp-dataproc-account',
+         account_description='Google Cloud Dataproc account',
+         roles=['roles/editor'],
+         services=['dataproc.googleapis.com'],
+>>>>>>> b4344275a9dfd0a79806d27e1e92f0af64b0bb66
          appspot_service_account_impersonation=False),
 ]
 

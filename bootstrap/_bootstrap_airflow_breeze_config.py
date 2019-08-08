@@ -186,6 +186,17 @@ SERVICE_ACCOUNTS = [
          services=['dataproc.googleapis.com'],
 >>>>>>> b4344275a9dfd0a79806d27e1e92f0af64b0bb66
          appspot_service_account_impersonation=False),
+    dict(keyfile='gcp_automl.json',
+         account_name='gcp-automl-account',
+         account_description='Google Cloud AutoML account',
+         roles=['roles/automl.admin'],
+         services=['automl.googleapis.com'],
+         appspot_service_account_impersonation=False),
+    dict(keyfile='gcp_bigquery.json',
+         account_name='gcp-bigquery-account',
+         account_description='Google Cloud BigQuery account',
+         roles=['roles/bigquery.admin', 'roles/storage.objectAdmin', 'roles/bigquery.tables.get'],
+         services=['bigquery.googleapis.com']),
 ]
 
 
